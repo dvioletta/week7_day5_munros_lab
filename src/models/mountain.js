@@ -11,14 +11,10 @@ Mountain.prototype.getData = function(mountain){
   const request = new RequestHelper(url);
   request.get()
   .then((data)=>{
-    this.data = data.message;
+    this.data = data;
     PubSub.publish('Mountains:Munros-Ready',this.data);
   })
   .catch((error)=>console.error(error));
 };
 
 module.exports = Mountain;
-
-// Mountain.prototype.bindEvents = function(){
-//   PubSub.publish('Mountains:Munros-Ready',)
-// };

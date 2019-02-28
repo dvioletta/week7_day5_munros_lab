@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mountainContainer = document.querySelector('#mountains');
   const selectView = new SelectView(mountainContainer);
-  console.log(selectView);
   selectView.bindEvents();
 
   const mountain = new Mountain();
